@@ -14,20 +14,20 @@ font-family:Arial,sans-serif;
 }
 
 body{
-background:#f4f7fb;
+background:#f5f7fb;
 line-height:1.6;
 }
 
 header{
-background:#0d6efd;
+background:#1565c0;
 color:white;
-text-align:center;
 padding:20px;
+text-align:center;
 }
 
 nav{
 background:#222;
-padding:15px;
+padding:12px;
 text-align:center;
 }
 
@@ -39,20 +39,17 @@ font-weight:bold;
 }
 
 .hero{
-background:#0d6efd;
-color:white;
-padding:80px 20px;
+background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f');
+background-size:cover;
+background-position:center;
+padding:100px 20px;
 text-align:center;
+color:white;
 }
 
-.btn{
-display:inline-block;
-padding:12px 25px;
-background:#ffc107;
-color:black;
-text-decoration:none;
-border-radius:5px;
-font-weight:bold;
+.hero h1{
+font-size:48px;
 }
 
 .section{
@@ -70,21 +67,32 @@ margin-top:20px;
 
 .card{
 background:white;
+width:320px;
 padding:20px;
 border-radius:10px;
-width:300px;
-box-shadow:0 2px 10px rgba(0,0,0,.1);
+box-shadow:0 2px 10px rgba(0,0,0,0.15);
 }
 
-.old{
+.btn{
+display:inline-block;
+padding:12px 20px;
+background:#ffc107;
+color:black;
+text-decoration:none;
+border-radius:5px;
+font-weight:bold;
+}
+
+.old-price{
 text-decoration:line-through;
 color:red;
+font-size:22px;
 }
 
-.new{
-color:green;
-font-size:28px;
+.new-price{
+font-size:30px;
 font-weight:bold;
+color:green;
 }
 
 input,select,textarea{
@@ -96,10 +104,10 @@ border-radius:5px;
 }
 
 button{
-background:#0d6efd;
+padding:12px 20px;
+background:#1565c0;
 color:white;
 border:none;
-padding:12px 25px;
 border-radius:5px;
 cursor:pointer;
 }
@@ -119,14 +127,18 @@ width:60px;
 height:60px;
 background:#25D366;
 color:white;
-border-radius:50%;
 text-align:center;
 line-height:60px;
-font-size:28px;
+font-size:30px;
 text-decoration:none;
+border-radius:50%;
 }
 
 @media(max-width:768px){
+.hero h1{
+font-size:32px;
+}
+
 .cards{
 flex-direction:column;
 align-items:center;
@@ -139,3 +151,172 @@ align-items:center;
 
 <header>
 <h1>Career Growth Classes</h1>
+<p>MP Board | Class 6th to 12th | All Subjects</p>
+</header>
+
+<nav>
+<a href="#about">About</a>
+<a href="#courses">Courses</a>
+<a href="#fees">Fees</a>
+<a href="#payment">Payment</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section class="hero">
+<h1>Career Growth Classes</h1>
+<p>आज की पढ़ाई, कल की सफलता</p>
+<br>
+<h2>Abhishek Sharma Sir</h2>
+<br>
+<a class="btn" href="https://wa.me/917581879202">
+Admission Open
+</a>
+</section>
+
+<section class="section" id="about">
+<h2>About Us</h2>
+<p>
+Career Growth Classes में MP Board के विद्यार्थियों को
+6वीं से 12वीं तक सभी विषयों की गुणवत्तापूर्ण शिक्षा दी जाती है।
+</p>
+</section>
+
+<section class="section" id="courses">
+<h2>Our Courses</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Class 6th to 10th</h3>
+<p>All Subjects</p>
+</div>
+
+<div class="card">
+<h3>Class 11th & 12th Commerce</h3>
+<p>Accountancy, Economics, Business Studies</p>
+</div>
+
+</div>
+</section>
+
+<section class="section" id="fees">
+
+<h2>Fee Structure</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Class 6th to 10th</h3>
+
+<p class="old-price">₹4000</p>
+
+<p class="new-price">₹3600</p>
+
+<p>Special Offer</p>
+
+</div>
+
+<div class="card">
+<h3>11th & 12th Commerce</h3>
+
+<h2>₹5000</h2>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="payment">
+
+<h2>Online Payment</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Class 6th to 10th</h3>
+<h2>₹3600</h2>
+
+<a class="btn"
+href="upi://pay?pa=tribalchief@ptyes&pn=Abhishek%20Sharma&am=3600&cu=INR">
+Pay Now
+</a>
+
+</div>
+
+<div class="card">
+<h3>11th & 12th Commerce</h3>
+<h2>₹5000</h2>
+
+<a class="btn"
+href="upi://pay?pa=tribalchief@ptyes&pn=Abhishek%20Sharma&am=5000&cu=INR">
+Pay Now
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Online Admission Form</h2>
+
+<form>
+<input type="text" placeholder="Student Name">
+
+<input type="tel" placeholder="Mobile Number">
+
+<select>
+<option>Select Class</option>
+<option>Class 6th</option>
+<option>Class 7th</option>
+<option>Class 8th</option>
+<option>Class 9th</option>
+<option>Class 10th</option>
+<option>Class 11th Commerce</option>
+<option>Class 12th Commerce</option>
+</select>
+
+<textarea rows="4" placeholder="Address"></textarea>
+
+<button type="submit">Submit Form</button>
+</form>
+
+</section>
+
+<section class="section" id="contact">
+
+<h2>Contact Us</h2>
+
+<p><b>Abhishek Sharma Sir</b></p>
+
+<p>📞 7581879202</p>
+
+<p>📚 MP Board Classes</p>
+
+<p>📍 Career Growth Classes</p>
+
+</section>
+
+<footer>
+
+<h3>Career Growth Classes</h3>
+
+<p>Director: Abhishek Sharma Sir</p>
+
+<p>Phone: 7581879202</p>
+
+<p>© 2026 All Rights Reserved</p>
+
+</footer>
+
+<a class="whatsapp"
+href="https://wa.me/917581879202"
+target="_blank">
+💬
+</a>
+
+</body>
+</html>
